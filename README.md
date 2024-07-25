@@ -1,3 +1,5 @@
 Mini Project: Library Management System
 
-*add later
+Welcome to the Library Management System!
+
+To use, please start with the main menu.

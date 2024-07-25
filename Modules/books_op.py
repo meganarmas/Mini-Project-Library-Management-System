@@ -1,10 +1,27 @@
-class Books:
-    def __init__(self, title, author, ISBN, publication_date, availability_status):
-        self.__title = title
-        self.__author = author
-        self.__ISBN = ISBN
-        self.__publication_date = publication_date
-        self.__availbility_status = "Available"
+from classes.class_books import Def_Books
+
+class Books_Op:
+    def book_menu(self):
+                print("Book Operations Menu")
+                print("1. Add a new book")
+                print("2. Borrow a book")
+                print("3. Return a book")
+                print("4. Search for a book")
+                print("5. Display all books")
+                choice = input("6. Enter choice: ")
+
+                if choice == '1':
+                    self.add_book
+                elif choice == '2':
+                    self.borrow_books
+                elif choice == '3':
+                    pass
+                elif choice == '4':
+                    pass
+                elif choice == '5':
+                    pass
+                else:
+                    print("Please enter a valid number.")
 
     def add_book(self):
 

@@ -1,6 +1,8 @@
-class Authors:
+from classes.class_authors import Authors_Class
+from 
 
-    def authors_menu():
+class Authors:
+    def authors_menu(self):
         print("Author Menu.")
         print("1. Add a new author")
         print("2. View author details")
@@ -8,10 +10,19 @@ class Authors:
         choice = input("4. Enter choice: ")
 
         if choice == '1':
-            pass
+            self.add_new_author()
         elif choice == '2':
-            pass
+            self.view_details()
         elif choice == '3':
-            pass
+            self.display_authors()
         else:
             print("Please enter a valid number.")
+
+    def add_new_author(self):
+        pass
+
+    def view_details(self):
+        pass
+
+    def display_authors():
+        pass

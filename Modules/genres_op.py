@@ -1,5 +1,6 @@
-class GenreMenu:
+from classes.class_genres import Genre_Class
 
+class GenreMenu:
     def genre_main(self):
         print("Genre Menu.")
         print("1. Add a new genre")
@@ -15,4 +16,11 @@ class GenreMenu:
             pass
         else:
             print("Please enter a valid number.")
+
+    def add_new_genre():
+        pass
+
+    def view_genres():
+
+    def display_genres():
 
