@@ -3,21 +3,9 @@ class UserClass:
         self.__first_name = first_name
         self.__last_name = last_name
         self.__library_id = library_id
-        self.__borrowed_books = []
-
-    def borrow_book(self, book):
-        if book.borrow_book():
-            self.__borrowed_books.append(book)
-            return True
-        
-    def return_book(self, book):
-        if book in self.__borrowed_books and book.return_book():
-            self.__borrowed_books.remove(book)
-            return True
-        return False
     
     def detail(self):
-        return f"First Name: {self.__first_name}, Last Name: {self.__last_name}, Library ID: {self.__library_id}, Borrowed Book: {[book.get_title() for book in self.__borrowed_books]}"
+        return f"First Name: {self.__first_name}, Last Name: {self.__last_name}, Library ID: {self.__library_id}"
     
     def get_first_name(self):
         return self.__first_name
@@ -28,9 +16,6 @@ class UserClass:
     def get_library_id(self):
         return self.__library_id
     
-    def get_borrowed_books(self):
-        return self.__borrowed_books
-    
     def set_first_name(self, first_name):
         self.__first_name = first_name
 
@@ -39,6 +24,3 @@ class UserClass:
     
     def get_library_id(self, library_id):
         self.__library_id = library_id
-    
-    def get_borrowed_books(self, borrowed_books):
-        self.__borrowed_books = borrowed_books

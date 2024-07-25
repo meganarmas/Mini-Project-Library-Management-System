@@ -1,5 +1,6 @@
 from classes.class_authors import Authors_Class
-from 
+
+authors = []
 
 class Authors:
     def authors_menu(self):

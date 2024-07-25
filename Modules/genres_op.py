@@ -1,5 +1,7 @@
 from classes.class_genres import Genre_Class
 
+genres = []
+
 class GenreMenu:
     def genre_main(self):
         print("Genre Menu.")
@@ -9,18 +11,29 @@ class GenreMenu:
         choice = input("4. Enter choice: ")
 
         if choice == '1':
-            pass
+            add_new_genre()
         elif choice == '2':
-            pass
+            view_genres()
         elif choice == '3':
-            pass
+            display_genres()
         else:
             print("Please enter a valid number.")
 
-    def add_new_genre():
-        pass
+            def add_new_genre():
+                genre_name = input("Enter the new genre's name: ")
+                genre_description = input ("Enter the description: ") 
+                genre_category = input("Enter the genre category: ")
+                exisiting_genre = get_genre_by
 
-    def view_genres():
+            def view_genres():
+                for genre in Genre_Class:
+                    if Genre_Class.get_name().lower() == name.lower():
+                        return genre
 
-    def display_genres():
+
+            def display_genres():
+                for genre in Genre_Class:
+                    print(f"Name: {Genre_Class.get_name}, Description: {Genre_Class.get_description}, Category: {Genre_Class.get_category}")
+                else:
+                    print("Not available.")
 
