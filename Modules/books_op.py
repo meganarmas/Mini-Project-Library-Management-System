@@ -31,21 +31,39 @@ class Books_Op:
                 else:
                     print("Please enter a valid number.")
 
-                def add_book(self):
+                def add_book():
                     title = input("Add title of book: ")
                     author = input("Add author of the book: ")
                     isbn = input("Enter isbn: ")
                     full_book = {'Title': {title}, 'Author': {author}, 'ISBN': {isbn}}
+                    books.append(full_book)
+                    print("Book has been added to the library.")
 
-                def borrow_books(self):
+                def borrow_books():
                     title = input("Enter the title of a book you would like to borrow: ")
-                    if title not in 
+                    if title not in books.index():
+                         print("Book was not found in library")
+                    else:
+                         print(f"{title} has been borrowed from the library.")
 
                 def return_books(self):
-                    pass
+                    found_book = input("Enter the ISBN of the book to be returned: ")
+                    found_book = [{entry["ISBN"]: books.index(entry)} for entry in books]
+                    try:
+                         if len(found_book) > 1:
+                              print("Multiple books found.")
+                            for index
+
+                    except ValueError:
+                         print("A book with that ISBN was not found.")
                 
                 def search_book(self):
                     searching_for_title = input("What is the name of the book you would like to find: ")
+                    searching_for_title = [{entry["Title"]: books.index(entry)} for entry in books]
+                    if searching_for_title in books:
+                         print(f"{books}")
+                    else:
+                         print("Book with that title was not found.")
 
                 def display_books():
                     for book in books:
