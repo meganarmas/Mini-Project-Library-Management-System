@@ -1,8 +1,6 @@
 from Modules.class_books import Def_Books
-from Modules.genres_op import Genre_Class
-from Modules.authors_op import Authors
-from Modules.class_authors import Authors_Class
 
+books_def = Def_Books
 
 books = []
 genres = []

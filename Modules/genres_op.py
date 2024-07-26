@@ -1,5 +1,7 @@
 from Modules.class_genres import Genre_Class
 
+genre_class = Genre_Class
+
 genres = []
 
 class GenreMenu:
@@ -24,21 +26,21 @@ class GenreMenu:
         genre_description = input ("Enter the description: ") 
         genre_category = input("Enter the genre category: ")
         new_genre = {'Name': {genre_name}, 'Description': {genre_description}, 'Category': {genre_category}}
-        if genre_name in Genre_Class.get_name:
-            exisiting_genre = Genre_Class.get_name(genre_name)
+        if genre_name in genre_class.get_name:
+            exisiting_genre = genre_class.get_name(genre_name)
             print(f"Genre {exisiting_genre} exists already.")
         else:
             genres.append(new_genre)
             print(f"{new_genre} has been added")
                 
     def view_genres(self):
-        for genre_name in Genre_Class:
-            if Genre_Class.get_name().lower() == genre_name.lower():
+        for genre_name in genre_class:
+            if genre_class.get_name().lower() == genre_name.lower():
                 print(genre_name.lower())
 
     def display_genres(self):
-        for name in Genre_Class:
-            print(f"Name: {Genre_Class.get_name}, Description: {Genre_Class.get_description}, Category: {Genre_Class.get_category}")
+        for genre_name in genre_class :
+            print(f"Name: {genre_class.get_name}, Description: {genre_class.get_description}, Category: {genre_class.get_category}")
         else:
             print("Not available.")
 

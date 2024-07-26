@@ -1,5 +1,7 @@
 from Modules.class_authors import Authors_Class
 
+author_class = Authors_Class
+
 authors = []
 
 class Authors:
@@ -28,7 +30,7 @@ class Authors:
 
     def view_details(self):
         name = input("Enter the author's name to search: ")
-        found_name = [author for author in authors if Authors_Class.get_author().lower() == name.lower]
+        found_name = [author for author in authors if author_class.get_author().lower() == name.lower]
         if found_name in authors:
             try:
                 print(f"{found_name} has been found.")
@@ -37,7 +39,7 @@ class Authors:
                     
     def display_authors(self):
         author = authors
-        if author in Authors_Class.__author_name:
+        if author in author_class.__author_name:
             print(author)
         else:
             print("No authors found.")
