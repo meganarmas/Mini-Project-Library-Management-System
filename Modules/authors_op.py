@@ -27,16 +27,15 @@ class Authors:
         print(f"{new_author} has been added to the library.")
 
     def view_details(self):
-       name = input("Enter the author's name to search: ")
-       found_name = [author for author in authors if Authors_Class.get_author().lower() == name.lower]
-       if found_name in authors:
+        name = input("Enter the author's name to search: ")
+        found_name = [author for author in authors if Authors_Class.get_author().lower() == name.lower]
+        if found_name in authors:
             try:
                 print(f"{found_name} has been found.")
             except NameError:
                 print("Author with that name has not been found.")
-               
-
-    def display_authors():
+                    
+    def display_authors(self):
         author = authors
         if author in Authors_Class.__author_name:
             print(author)
