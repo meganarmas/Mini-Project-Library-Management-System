@@ -51,9 +51,9 @@ class Books_Op:
                     found_book = [{entry["ISBN"]: books.index(entry)} for entry in books]
                     try:
                          if len(found_book) > 1:
-                              print("Multiple books found.")
-                            for index
-
+                            print("Multiple books found.")
+                            for book in enumerate(found_book, start=1):
+                              print(f"{books.index()} found and returned")
                     except ValueError:
                          print("A book with that ISBN was not found.")
                 
@@ -67,4 +67,8 @@ class Books_Op:
 
                 def display_books():
                     for book in books:
-                        print(f"Title: {book[name]}")
+                        print(f"Title: {book["title"]}")
+                        print(f"Author: {book["author"]}")
+                        print(f"ISBN: {book["isbn"]}")
+                    if not books:
+                         print("No books found in the library.")
