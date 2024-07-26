@@ -5,7 +5,7 @@ from Modules.genres_op import GenreMenu
 
 class LibraryManagement:
 
-    def main(self):
+    def main():
         while True:
             print("Welcome to the Library Management System! \nMenu")
             print("1. Book Operations")
@@ -13,7 +13,7 @@ class LibraryManagement:
             print("3. Author Operations")
             print("4. Genre Operations")
             print("5. Quit")
-            choice = input("What would you like to do?")
+            choice = input("Enter choice: ")
 
             if choice == '1':
                 Books_Op.book_menu
