@@ -1,9 +1,10 @@
 class UserClass:
-    def __init__(self, first_name, last_name library_id):
+    def __init__(self, first_name, last_name, library_id):
         self.__first_name = first_name
         self.__last_name = last_name
         self.__library_id = library_id
-    
+
+
     def detail(self):
         return f"First Name: {self.__first_name}, Last Name: {self.__last_name}, Library ID: {self.__library_id}"
     

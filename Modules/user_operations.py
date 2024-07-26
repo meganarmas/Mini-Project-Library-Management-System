@@ -1,4 +1,4 @@
-from classes.class_users import UserClass
+from Modules.class_users import UserClass
 
 users = []
 

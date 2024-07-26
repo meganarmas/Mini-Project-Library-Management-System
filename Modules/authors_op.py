@@ -1,4 +1,4 @@
-from classes.class_authors import Authors_Class
+from Modules.class_authors import Authors_Class
 
 authors = []
 
@@ -20,10 +20,25 @@ class Authors:
             print("Please enter a valid number.")
 
     def add_new_author(self):
-        pass
+        author_name = input("Enter the author's name: ")
+        biography = input ("Enter the author's biography: ")
+        new_author = {'Name': {author_name}, 'Biography': {biography}}
+        authors.append(new_author)
+        print(f"{new_author} has been added to the library.")
 
     def view_details(self):
-        pass
+       name = input("Enter the author's name to search: ")
+       found_name = [author for author in authors if Authors_Class.get_author().lower() == name.lower]
+       if found_name in authors:
+            try:
+                print(f"{found_name} has been found.")
+            except NameError:
+                print("Author with that name has not been found.")
+               
 
     def display_authors():
-        pass
+        author = authors
+        if author in Authors_Class.__author_name:
+            print(author)
+        else:
+            print("No authors found.")

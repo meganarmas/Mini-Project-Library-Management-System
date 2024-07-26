@@ -1,4 +1,4 @@
-from classes.class_genres import Genre_Class
+from Modules.class_genres import Genre_Class
 
 genres = []
 
@@ -23,11 +23,19 @@ class GenreMenu:
                 genre_name = input("Enter the new genre's name: ")
                 genre_description = input ("Enter the description: ") 
                 genre_category = input("Enter the genre category: ")
-                exisiting_genre = get_genre_by
+                new_genre = {'Name': {genre_name}, 'Description': {genre_description}, 'Category': {genre_category}}
+                if genre_name in Genre_Class.get_name:
+                    exisiting_genre = Genre_Class.get_name(genre_name)
+                    print(f"Genre {exisiting_genre} exists already.")
+                else:
+                    genres.append(new_genre)
+                    print(f"{new_genre} has been added")
+                
+                
 
             def view_genres():
                 for genre in Genre_Class:
-                    if Genre_Class.get_name().lower() == name.lower():
+                    if Genre_Class.get_name().lower() == genre_name.lower():
                         return genre
 
 

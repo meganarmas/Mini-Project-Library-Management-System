@@ -111,7 +111,6 @@ Implement error handling using try, except, else, and finally blocks to manage p
 
 
 GitHub Repository:
-
 Create a GitHub repository for your project and commit code regularly.
 Maintain a clean and interactive README.md file in your GitHub repository, providing clear instructions on how to run the application and explanations of its features.
 Include a link to your GitHub repository in your project documentation.

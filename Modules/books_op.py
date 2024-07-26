@@ -1,6 +1,12 @@
-from classes.class_books import Def_Books
+from Modules.class_books import Def_Books
+from Modules.genres_op import Genre_Class
+from Modules.authors_op import Authors
+from Modules.class_authors import Authors_Class
+
 
 books = []
+genres = []
+authors = []
 
 class Books_Op:
     def book_menu(self):
@@ -26,16 +32,21 @@ class Books_Op:
                     print("Please enter a valid number.")
 
                 def add_book(self):
-                    pass
+                    title = input("Add title of book: ")
+                    author = input("Add author of the book: ")
+                    isbn = input("Enter isbn: ")
+                    full_book = {'Title': {title}, 'Author': {author}, 'ISBN': {isbn}}
 
                 def borrow_books(self):
-                    pass
+                    title = input("Enter the title of a book you would like to borrow: ")
+                    if title not in 
 
                 def return_books(self):
                     pass
                 
                 def search_book(self):
-                    pass
+                    searching_for_title = input("What is the name of the book you would like to find: ")
 
                 def display_books():
-                    pass
+                    for book in books:
+                        print(f"Title: {book[name]}")

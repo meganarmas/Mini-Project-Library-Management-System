@@ -16,13 +16,13 @@ class LibraryManagement:
             choice = input("What would you like to do?")
 
             if choice == '1':
-                Books_Op
+                Books_Op.book_menu
             elif choice == '2':
-                UserOperations
+                UserOperations.user_op_menu
             elif choice == '3':
-                Authors
+                Authors.authors_menu
             elif choice == '4':
-                GenreMenu
+                GenreMenu.genre_main
             elif choice == '5':
                 print("Thank you for using the Library Management System! Now closing...")
                 break
