@@ -1,4 +1,4 @@
-class Authors_Class:
+class Authors_Class():
     def __init__(self, author_name, biography ):
         self.__author_name = author_name
         self.__biography = biography

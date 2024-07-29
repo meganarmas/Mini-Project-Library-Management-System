@@ -1,16 +1,16 @@
-from Modules.user_operations import UserOperations
-from Modules.authors_op import Authors
-from Modules.books_op import Books_Op
-from Modules.genres_op import GenreMenu
+from Modules.user_operations import user_op_menu;()
+from Modules.authors_op import authors_menu;()
+from Modules.books_op import book_menu;()
+from Modules.genres_op import genre_main;()
 
 
 class LibraryManagement:
 
     def main():
-        user_operations = UserOperations()
-        authors_op = Authors()
-        book_ops = Books_Op()
-        genre_operations = GenreMenu()
+        user_operations = user_op_menu()
+        authors_op = authors_menu()
+        book_ops = book_menu()
+        genre_operations = genre_main()
         while True:
             print("Welcome to the Library Management System! \nMenu")
             print("1. Book Operations")

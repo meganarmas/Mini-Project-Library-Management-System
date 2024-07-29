@@ -1,4 +1,4 @@
-class Genre_Class:
+class Genre_Class():
     def __init__(self, name, description, category):
         self.__name = name
         self.__description = description

@@ -1,4 +1,4 @@
-class Def_Books:
+class Def_Books():
     def __init__(self, title, author, genre, ISBN, publication_date):
         self.__title = title
         self.__author = author
