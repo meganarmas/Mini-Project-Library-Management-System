@@ -5,7 +5,7 @@ genre_class = Genre_Class
 genres = []
 
 
-def genre_main(self):
+def genre_main():
     print("Genre Menu.")
     print("1. Add a new genre")
     print("2. View genre details")
@@ -13,11 +13,11 @@ def genre_main(self):
     choice = input("4. Enter choice: ")
 
     if choice == '1':
-        self.add_new_genre()
+        add_new_genre()
     elif choice == '2':
-        self.view_genres()
+        view_genres()
     elif choice == '3':
-        self.display_genres()
+        display_genres()
     else:
         print("Please enter a valid number.")
 
@@ -33,12 +33,12 @@ def add_new_genre():
         genres.append(new_genre)
         print(f"{new_genre} has been added")
                 
-def view_genres(self):
+def view_genres():
     for genre_name in genre_class:
         if genre_class.get_name().lower() == genre_name.lower():
             print(genre_name.lower())
 
-def display_genres(self):
+def display_genres():
     for genre_name in genre_class :
         print(f"Name: {genre_class.get_name}, Description: {genre_class.get_description}, Category: {genre_class.get_category}")
     else:

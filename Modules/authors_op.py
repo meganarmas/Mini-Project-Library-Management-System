@@ -5,7 +5,7 @@ author_class = Authors_Class
 authors = []
 
 
-def authors_menu(self):
+def authors_menu():
     print("Author Menu.")
     print("1. Add a new author")
     print("2. View author details")
@@ -13,22 +13,22 @@ def authors_menu(self):
     choice = input("4. Enter choice: ")
 
     if choice == '1':
-        self.add_new_author()
+        add_new_author()
     elif choice == '2':
-        self.view_details()
+        view_details()
     elif choice == '3':
-        self.display_authors()
+        display_authors()
     else:
         print("Please enter a valid number.")
 
-def add_new_author(self):
+def add_new_author():
     author_name = input("Enter the author's name: ")
     biography = input ("Enter the author's biography: ")
     new_author = {'Name': {author_name}, 'Biography': {biography}}
     authors.append(new_author)
     print(f"{new_author} has been added to the library.")
 
-def view_details(self):
+def view_details():
     name = input("Enter the author's name to search: ")
     found_name = [author for author in authors if author_class.get_author().lower() == name.lower]
     if found_name in authors:
@@ -37,7 +37,7 @@ def view_details(self):
         except NameError:
             print("Author with that name has not been found.")
                     
-def display_authors(self):
+def display_authors():
     author = authors
     if author in author_class.__author_name:
         print(author)
