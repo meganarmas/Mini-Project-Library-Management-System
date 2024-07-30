@@ -4,9 +4,9 @@ from Modules.books_op import book_menu
 from Modules.genres_op import genre_main
 
 
-class LibraryManagement:
+class LibraryManagement():
 
-    def main():
+    def main(self):
         while True:
             print("Welcome to the Library Management System! \nMenu")
             print("1. Book Operations")
@@ -31,5 +31,6 @@ class LibraryManagement:
             else:
                 print("Please enter a valid number.")
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__": 
+    library_management = LibraryManagement()
+    library_management.main()

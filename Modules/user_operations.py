@@ -20,12 +20,20 @@ def user_op_menu():
     
 
 def add_new_user():
-        first_name = input("Enter first name: ")
-        last_name = input("Enter last name: ")
-        library_id = input("Enter library ID: ")
-        new_user = {'First Name': first_name, 'Last Name': last_name, 'Library Id': library_id}
+    first_name = input("Enter first name: ")
+    last_name = input("Enter last name: ")
+    library_id = input("Enter library ID: ")
+    new_user = {'First Name': first_name, 'Last Name': last_name, 'Library Id': library_id}
+    if len(users) >= 1:
+        for user in users:
+            if first_name in users.values():
+                print(f"User {user} exists already.")
+            else:
+                users.append(new_user)
+                print(f"{new_user} has been added")
+    else:
         users.append(new_user)
-        print(f"{new_user} has been added.")
+        print(f"{new_user} has been added")
 
 def view_users():
         library_id = input("Enter library ID of user: ")

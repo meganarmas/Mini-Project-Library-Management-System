@@ -4,7 +4,6 @@ genre_class = Genre_Class
 
 genres = []
 
-
 def genre_main():
     print("Genre Menu.")
     print("1. Add a new genre")
@@ -25,18 +24,22 @@ def add_new_genre():
     genre_name = input("Enter the new genre's name: ")
     genre_description = input ("Enter the description: ") 
     genre_category = input("Enter the genre category: ")
-    new_genre = {'Name': {genre_name}, 'Description': {genre_description}, 'Category': {genre_category}}
-    if genre_name in genre_class.get_name:
-        exisiting_genre = genre_class.get_name(genre_name)
-        print(f"Genre {exisiting_genre} exists already.")
+    new_genre = {'Name': genre_name, 'Description': genre_description, 'Category': genre_category}
+    if len(genres) >= 1:
+        for genre in genres:
+            if genre_name in genre.values():
+                print(f"Genre {genre} exists already.")
+            else:
+                genres.append(new_genre)
+                print(f"{new_genre} has been added")
     else:
         genres.append(new_genre)
         print(f"{new_genre} has been added")
                 
 def view_genres():
-    for genre_name in genre_class:
-        if genre_class.get_name().lower() == genre_name.lower():
-            print(genre_name.lower())
+    for genre_name in genres:
+        print(genre_name)
+        
 
 def display_genres():
     for genre_name in genre_class :

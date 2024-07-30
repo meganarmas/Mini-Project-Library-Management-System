@@ -5,20 +5,20 @@ class Def_Books():
         self.__genre = genre
         self.__ISBN = ISBN
         self.__publication_date = publication_date
-        self.__availbility_status = "Available"
+        self.__availbility_status = "available"
 
     def borrow_book(self):
-        if self.__availbility_status == "Available":
-            self.__availbility_status == "Borrowed"
+        if self.__availbility_status == "available":
+            self.__availbility_status == "borrowed"
             return True
     
     def return_book(self):
-        if self.__availbility_status == "Borrowed":
-            self.__availbility_status == "Available"
+        if self.__availbility_status == "borrowed":
+            self.__availbility_status == "available"
             return True
         
     def __str__(self):
-        return f"Title: {self.__title}, Author: {self.__author}, Genre: {self.__genre} ISBN: {self.__ISBN}, Published: {self.__publication_date}, Availibity: {self.__availbility_status}"
+        return f"title: {self.__title}, author: {self.__author}, genre: {self.__genre} isbn: {self.__ISBN}, published: {self.__publication_date}, availibity: {self.__availbility_status}"
     
     def get_title(self):
         return self.__title

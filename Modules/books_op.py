@@ -35,7 +35,7 @@ def add_book():
     title = input("Add title of book: ")
     author = input("Add author of the book: ")
     isbn = input("Enter isbn: ")
-    full_book = {'Title': {title}, 'Author': {author}, 'ISBN': {isbn}}
+    full_book = {'title': {title}, 'author': {author}, 'isbn': {isbn}}
     books.append(full_book)
     print("Book has been added to the library.")
 
