@@ -36,8 +36,16 @@ def add_book():
     author = input("Add author of the book: ")
     isbn = input("Enter isbn: ")
     full_book = {'title': {title}, 'author': {author}, 'isbn': {isbn}}
-    books.append(full_book)
-    print("Book has been added to the library.")
+    if len(books) >= 1:
+        for book in books:
+            if title in books.values():
+                print(f"User {book} exists already.")
+            else:
+                books.append(full_book)
+                print(f"{full_book} has been added")
+    else:
+        books.append(full_book)
+        print(f"{full_book} has been added")
 
 def borrow_books():
     title = input("Enter the title of a book you would like to borrow: ")
@@ -48,7 +56,7 @@ def borrow_books():
 
 def return_books():
     found_book = input("Enter the ISBN of the book to be returned: ")
-    found_book = [{entry["ISBN"]: books.index(entry)} for entry in books]
+    found_book = [{entry["isbn"]: books.index(entry)} for entry in books]
     try:
         if len(found_book) > 1:
             print("Multiple books found.")
@@ -59,7 +67,7 @@ def return_books():
                     
 def search_book():
     searching_for_title = input("What is the name of the book you would like to find: ")
-    searching_for_title = [{entry["Title"]: books.index(entry)} for entry in books]
+    searching_for_title = [{entry["title"]: books.index(entry)} for entry in books]
     if searching_for_title in books:
         print(f"{books}")
     else:
@@ -67,8 +75,8 @@ def search_book():
 
 def display_books():
     for book in books:
-        print(f"Title: {book["title"]}")
-        print(f"Author: {book["author"]}")
-        print(f"ISBN: {book["isbn"]}")
+        print(f"title: {book["title"]}")
+        print(f"author: {book["author"]}")
+        print(f"isbn: {book["isbn"]}")
     if not books:
         print("No books found in the library.")

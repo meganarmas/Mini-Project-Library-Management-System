@@ -23,10 +23,10 @@ def add_new_user():
     first_name = input("Enter first name: ")
     last_name = input("Enter last name: ")
     library_id = input("Enter library ID: ")
-    new_user = {'First Name': first_name, 'Last Name': last_name, 'Library Id': library_id}
+    new_user = {'first Name': first_name, 'last Name': last_name, 'library id': library_id}
     if len(users) >= 1:
         for user in users:
-            if first_name in users.values():
+            if first_name in user.values():
                 print(f"User {user} exists already.")
             else:
                 users.append(new_user)
@@ -46,5 +46,5 @@ def view_users():
 
 def display_all_details():
     for user in users:
-        print(f"First name: {user["First name"]} Last name: {user["Last name"]}")
-        print(f"Library ID: {user["Library Id"]}")
+        print(f"first name: {user["first name"]} last name: {user["last name"]}")
+        print(f"library ID: {user["library id"]}")

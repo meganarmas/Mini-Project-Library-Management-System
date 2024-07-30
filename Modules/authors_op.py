@@ -24,9 +24,17 @@ def authors_menu():
 def add_new_author():
     author_name = input("Enter the author's name: ")
     biography = input ("Enter the author's biography: ")
-    new_author = {'Name': {author_name}, 'Biography': {biography}}
-    authors.append(new_author)
-    print(f"{new_author} has been added to the library.")
+    new_author = {'name': {author_name}, 'biography': {biography}}
+    if len(authors) >= 1:
+        for author in authors:
+            if author_name in author.values():
+                print(f"User {author} exists already.")
+            else:
+                users.append(new_author)
+                print(f"{author} has been added")
+    else:
+        authors.append(new_author)
+        print(f"{new_author} has been added")
 
 def view_details():
     name = input("Enter the author's name to search: ")
