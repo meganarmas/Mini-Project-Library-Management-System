@@ -38,9 +38,9 @@ def add_new_user():
 def view_users():
         library_id = input("Enter library ID of user: ")
         for user in users:
-            if UserClass.get_library_id() == library_id:                
+            if user == library_id:                
                 print(f"{user}found!")
-                print(f"First Name: {UserClass.get_first_name}, Last Name: {UserClass.get_last_name}, Library ID: {UserClass.get_library_id}")
+                print(f"first name: {user["first name"]}, last name: {user["last name"]}, Library ID: {user["library id"]}")
         else:
             print("User was not found.")
 

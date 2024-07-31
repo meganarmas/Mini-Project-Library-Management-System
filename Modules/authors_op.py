@@ -10,7 +10,7 @@ def authors_menu():
     print("1. Add a new author")
     print("2. View author details")
     print("3. Display all authors")
-    choice = input("4. Enter choice: ")
+    choice = input("Enter choice: ")
 
     if choice == '1':
         add_new_author()
@@ -37,17 +37,12 @@ def add_new_author():
         print(f"{new_author} has been added")
 
 def view_details():
-    name = input("Enter the author's name to search: ")
-    found_name = [author for author in authors if author_class.get_author().lower() == name.lower]
-    if found_name in authors:
-        try:
-            print(f"{found_name} has been found.")
-        except NameError:
-            print("Author with that name has not been found.")
+    for author_name in authors:
+        print(author_name)
                     
 def display_authors():
     author = authors
-    if author in author_class.__author_name:
+    if author in authors:
         print(author)
     else:
         print("No authors found.")

@@ -9,7 +9,7 @@ def genre_main():
     print("1. Add a new genre")
     print("2. View genre details")
     print("3. Display all genres")
-    choice = input("4. Enter choice: ")
+    choice = input("Enter choice: ")
 
     if choice == '1':
         add_new_genre()
@@ -24,7 +24,7 @@ def add_new_genre():
     genre_name = input("Enter the new genre's name: ")
     genre_description = input ("Enter the description: ") 
     genre_category = input("Enter the genre category: ")
-    new_genre = {'Name': genre_name, 'Description': genre_description, 'Category': genre_category}
+    new_genre = {'name': genre_name, 'description': genre_description, 'category': genre_category}
     if len(genres) >= 1:
         for genre in genres:
             if genre_name in genre.values():
@@ -42,8 +42,9 @@ def view_genres():
         
 
 def display_genres():
-    for genre_name in genre_class :
-        print(f"Name: {genre_class.get_name}, Description: {genre_class.get_description}, Category: {genre_class.get_category}")
+    if genres:
+            for genre in genres:
+                print(genre)
     else:
-        print("Not available.")
+        print("No genres have been added to the library.")
 
