@@ -35,10 +35,10 @@ def add_book():
     title = input("Add title of book: ")
     author = input("Add author of the book: ")
     isbn = input("Enter isbn: ")
-    full_book = {'title': {title}, 'author': {author}, 'isbn': {isbn}}
+    full_book = {'title': {title}, 'author': {author}, 'isbn': {isbn}, 'status': 'available'}
     if len(books) >= 1:
         for book in books:
-            if title in books.values():
+            if title in book.values():
                 print(f"User {book} exists already.")
             else:
                 books.append(full_book)
@@ -48,20 +48,30 @@ def add_book():
         print(f"{full_book} has been added")
 
 def borrow_books():
-    title = input("Enter the title of a book you would like to borrow: ")
-    if title not in books.index():
-        print("Book was not found in library")
-    else:
-        print(f"{title} has been borrowed from the library.")
+    isbn_borrow = input("Enter the ISBN of a book you would like to borrow: ")
+    book = isbn_borrow 
+    try:
+        if len(isbn_borrow) > 1:
+            print("Multiple books found.")
+        index = int(isbn_borrow ) - 1
+        if 0 <= index < len(books):
+            for book in enumerate(isbn_borrow , start=1):
+                books[index]['status'] = 'borrowed'
+                print(f"Book with the isbn {book} is out of the library!")
+    except ValueError:
+        print("A book with that ISBN was not found.")
 
 def return_books():
-    found_book = input("Enter the ISBN of the book to be returned: ")
-    found_book = [{entry["isbn"]: books.index(entry)} for entry in books]
+    isbn_book = input("Enter the ISBN of the book to be returned: ")
+    book = isbn_book
     try:
-        if len(found_book) > 1:
+        if len(isbn_book) > 1:
             print("Multiple books found.")
-            for book in enumerate(found_book, start=1):
-                print(f"{book.index()} found and returned")
+        index = int(isbn_book) - 1
+        if 0 <= index < len(books):
+            for book in enumerate(isbn_book, start=1):
+                books[index]['status'] = 'available'
+                print(f"Book with the isbn {book} found and returned")
     except ValueError:
         print("A book with that ISBN was not found.")
                     
