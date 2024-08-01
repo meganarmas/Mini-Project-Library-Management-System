@@ -66,17 +66,16 @@ def return_books():
         print("A book with that ISBN was not found.")
                     
 def search_book():
-    searching_for_title = input("What is the name of the book you would like to find: ")
-    searching_for_title = [{entry["title"]: books.index(entry)} for entry in books]
-    if searching_for_title in books:
-        print(f"{books}")
+    title = input("What is the name of the book you would like to find: ")
+    book = title
+    if book:
+        print(f"Found {book} in the library!")
     else:
         print("Book with that title was not found.")
 
 def display_books():
-    for book in books:
-        print(f"title: {book["title"]}")
-        print(f"author: {book["author"]}")
-        print(f"isbn: {book["isbn"]}")
-    if not books:
+    if books:
+            for book in books:
+                print(book)
+    else:
         print("No books found in the library.")

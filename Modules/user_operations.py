@@ -38,13 +38,15 @@ def add_new_user():
 def view_users():
         library_id = input("Enter library ID of user: ")
         for user in users:
-            if user == library_id:                
+            if user in library_id:              
                 print(f"{user}found!")
                 print(f"first name: {user["first name"]}, last name: {user["last name"]}, Library ID: {user["library id"]}")
         else:
             print("User was not found.")
 
 def display_all_details():
-    for user in users:
-        print(f"first name: {user["first name"]} last name: {user["last name"]}")
-        print(f"library ID: {user["library id"]}")
+    if users:
+            for user in users:
+                print(user)
+    else:
+        print("No users have been added to the library.")
